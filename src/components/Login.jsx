@@ -21,7 +21,8 @@ const Login = () => {
       const data = await response.json();
 
       if (data.authenticated) {
-        localStorage.setItem('authenticated', true);
+        localStorage.setItem('authenticated', 'true');
+        console.log('Login successful');
         navigate('/home');
       } else {
         alert('Invalid credentials');
@@ -57,6 +58,9 @@ const Login = () => {
     </div>
   );
 };
+
+
+
 
 const styles = {
   container: {
