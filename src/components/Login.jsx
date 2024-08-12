@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './Login.css'; // Importing the CSS file for animations
 
 const Login = () => {
   const [username, setUsername] = useState('');
@@ -34,16 +35,16 @@ const Login = () => {
   };
 
   return (
-    <div style={styles.container}>
-      <h2 style={styles.heading}>Login Page</h2>
-      <form onSubmit={handleSubmit} style={styles.form}>
+    <div className="login-container">
+      <h2 className="login-heading">Login Page</h2>
+      <form onSubmit={handleSubmit} className="login-form">
         <input
           type="text"
           placeholder="Username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           required
-          style={styles.input}
+          className="login-input"
         />
         <input
           type="password"
@@ -51,73 +52,12 @@ const Login = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
-          style={styles.input}
+          className="login-input"
         />
-        <button type="submit" style={styles.button}>Login</button>
+        <button type="submit" className="login-button">Login</button>
       </form>
     </div>
   );
-};
-
-
-
-
-const styles = {
-  container: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    height: '100vh',
-    backgroundColor: '#1A1A1D',
-    color: '#EAEAEA',
-    padding: '20px',
-    boxSizing: 'border-box',
-  },
-  heading: {
-    marginBottom: '20px',
-    fontSize: '28px',
-    color: '#C060A1',
-  },
-  form: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    backgroundColor: '#333',
-    padding: '40px',
-    borderRadius: '8px',
-    boxShadow: '0 0 15px rgba(0,0,0,0.3)',
-    width: '100%',
-    maxWidth: '400px',
-  },
-  input: {
-    width: '100%',
-    padding: '12px',
-    margin: '10px 0',
-    borderRadius: '8px',
-    border: '2px solid #6A097D',
-    backgroundColor: '#444',
-    color: '#EAEAEA',
-    fontSize: '16px',
-    outline: 'none',
-    transition: 'border-color 0.3s ease',
-  },
-  button: {
-    padding: '12px 24px',
-    fontSize: '16px',
-    borderRadius: '8px',
-    border: 'none',
-    backgroundColor: '#6A097D',
-    color: '#fff',
-    cursor: 'pointer',
-    transition: 'background-color 0.3s ease, transform 0.2s ease',
-    outline: 'none',
-    width: '100%',
-    marginTop: '20px',
-  },
-  buttonHoverStyle: {
-    backgroundColor: '#C060A1',
-  },
 };
 
 export default Login;

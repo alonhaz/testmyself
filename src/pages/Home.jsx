@@ -1,5 +1,6 @@
 // pages/Home.jsx
 import React, { useState } from 'react';
+import './Home.css'; // Importing the CSS file for bubble effects
 
 const Home = () => {
   const [text, setText] = useState('');
@@ -54,9 +55,11 @@ const Home = () => {
     textAlign: 'center',
     padding: '20px',
     boxSizing: 'border-box',
-    backgroundColor: '#1A1A1D',
+    background: 'linear-gradient(45deg, #0f0c29, #302b63, #24243e)',
     color: '#EAEAEA',
-    transform: 'translateX(20px)', // Move the container 20px to the right
+    fontFamily: 'Arial, sans-serif',
+    overflow: 'hidden',
+    position: 'relative',
   };
 
   const inputStyle = {
@@ -64,13 +67,14 @@ const Home = () => {
     fontSize: '18px',
     marginBottom: '10px',
     borderRadius: '8px',
-    border: '2px solid #6A097D',
-    backgroundColor: '#333',
+    border: '2px solid #FF0081',
+    backgroundColor: '#222',
     color: '#EAEAEA',
     width: '100%',
     maxWidth: '400px',
     outline: 'none',
-    transition: 'border-color 0.3s ease',
+    boxShadow: '0 0 10px rgba(255, 0, 129, 0.7)',
+    transition: 'border-color 0.3s ease, box-shadow 0.3s ease',
   };
 
   const buttonStyle = {
@@ -80,50 +84,60 @@ const Home = () => {
     borderRadius: '8px',
     border: 'none',
     color: '#fff',
-    backgroundColor: '#6A097D',
+    backgroundColor: '#FF0081',
     cursor: 'pointer',
-    transition: 'background-color 0.3s ease, transform 0.2s ease',
+    transition: 'background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease',
     outline: 'none',
+    boxShadow: '0 0 10px rgba(255, 0, 129, 0.8)',
   };
 
   const buttonHoverStyle = {
-    backgroundColor: '#C060A1',
+    backgroundColor: '#FF6F91',
+    boxShadow: '0 0 15px rgba(255, 0, 129, 1)',
   };
 
   const buttonClickStyle = {
     transform: 'scale(0.95)',
+    boxShadow: '0 0 10px rgba(255, 0, 129, 0.6)',
   };
 
   const boxStyle = {
     marginTop: '20px',
     padding: '20px',
-    border: '2px solid #6A097D',
+    border: '2px solid #FF0081',
     borderRadius: '8px',
     width: '100%',
     maxWidth: '400px',
-    backgroundColor: '#333',
+    backgroundColor: '#222',
     color: '#EAEAEA',
-    boxShadow: '0 0 15px rgba(0,0,0,0.3)',
+    boxShadow: '0 0 20px rgba(255, 0, 129, 0.7)',
     transition: 'box-shadow 0.3s ease',
   };
 
   return (
     <div style={containerStyle}>
+      <div className="bubbles"></div> {/* Bubble effect container */}
       <input
         type="text"
         value={text}
         onChange={(e) => setText(e.target.value)}
         placeholder="Enter text"
         style={inputStyle}
-        onFocus={(e) => (e.target.style.borderColor = '#C060A1')}
-        onBlur={(e) => (e.target.style.borderColor = '#6A097D')}
+        onFocus={(e) => (e.target.style.borderColor = '#FF6F91')}
+        onBlur={(e) => (e.target.style.borderColor = '#FF0081')}
       />
       <div>
         <button 
           onClick={handleEnterToDB} 
           style={buttonStyle}
-          onMouseOver={(e) => e.currentTarget.style.backgroundColor = buttonHoverStyle.backgroundColor}
-          onMouseOut={(e) => e.currentTarget.style.backgroundColor = buttonStyle.backgroundColor}
+          onMouseOver={(e) => {
+            e.currentTarget.style.backgroundColor = buttonHoverStyle.backgroundColor;
+            e.currentTarget.style.boxShadow = buttonHoverStyle.boxShadow;
+          }}
+          onMouseOut={(e) => {
+            e.currentTarget.style.backgroundColor = buttonStyle.backgroundColor;
+            e.currentTarget.style.boxShadow = buttonStyle.boxShadow;
+          }}
           onMouseDown={(e) => e.currentTarget.style.transform = buttonClickStyle.transform}
           onMouseUp={(e) => e.currentTarget.style.transform = 'scale(1)'}
         >
@@ -132,8 +146,14 @@ const Home = () => {
         <button 
           onClick={handleGetLastEntry} 
           style={buttonStyle}
-          onMouseOver={(e) => e.currentTarget.style.backgroundColor = buttonHoverStyle.backgroundColor}
-          onMouseOut={(e) => e.currentTarget.style.backgroundColor = buttonStyle.backgroundColor}
+          onMouseOver={(e) => {
+            e.currentTarget.style.backgroundColor = buttonHoverStyle.backgroundColor;
+            e.currentTarget.style.boxShadow = buttonHoverStyle.boxShadow;
+          }}
+          onMouseOut={(e) => {
+            e.currentTarget.style.backgroundColor = buttonStyle.backgroundColor;
+            e.currentTarget.style.boxShadow = buttonStyle.boxShadow;
+          }}
           onMouseDown={(e) => e.currentTarget.style.transform = buttonClickStyle.transform}
           onMouseUp={(e) => e.currentTarget.style.transform = 'scale(1)'}
         >

@@ -1,0 +1,133 @@
+/* Login.css */
+
+/* Container Styles */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #1A1A1D, #333);
+    color: #EAEAEA;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    background-image: url('/src/components/robotic-background.png.avif'); /* Add your robotic image path */
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* Adding a decorative overlay */
+  .login-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+    z-index: 1;
+  }
+  
+  /* Form Styles */
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #222;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    z-index: 2; /* Ensure form is above the overlay */
+  }
+  
+  /* Input Styles */
+  .login-input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 2px solid #6A097D;
+    background: #444;
+    color: #EAEAEA;
+    font-size: 16px;
+    outline: none;
+    animation: input-focus 0.3s ease-in-out;
+    transition: border-color 0.3s ease;
+  }
+  
+  .login-input:focus {
+    border-color: #C060A1;
+    box-shadow: 0 0 10px rgba(255, 0, 129, 0.7);
+  }
+  
+  /* Button Styles */
+  .login-button {
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    background: #6A097D;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    outline: none;
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .login-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 20%, transparent 50%);
+    transition: transform 0.5s ease;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+  }
+  
+  .login-button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .login-button:hover {
+    background: #C060A1;
+    box-shadow: 0 0 25px rgba(255, 0, 129, 0.8);
+  }
+  
+  .login-button:active {
+    transform: scale(0.95);
+    box-shadow: 0 0 15px rgba(255, 0, 129, 0.6);
+  }
+  
+  /* Animations */
+  @keyframes pulse {
+    0% {
+      color: #C060A1;
+    }
+    50% {
+      color: #FF6F91;
+    }
+    100% {
+      color: #C060A1;
+    }
+  }
+  
+  @keyframes input-focus {
+    0% {
+      border-color: #6A097D;
+    }
+    100% {
+      border-color: #C060A1;
+    }
+  }
+  
