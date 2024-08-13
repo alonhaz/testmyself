@@ -31,23 +31,23 @@
 
 /* Adding animated dolphins */
 .login-container .dolphin {
-    content: url('/src/components/ima\ \(6\)-fotor-bg-remover-2024081310580.jpg');
+    content: url('/src/components/imgbin-dolphin-cartoon-drawing-dolphin-blue-and-white-dolphin-illustration-Z1XmB7RytZ4YnWvv3Zs3kZY8N-fotor-bg-remover-20240813113931.png');
     position: absolute;
-    width: 75px; /* Adjust width to make the dolphin smaller */
+    width: 300px; /* Adjust width to make the dolphin smaller */
     height: auto;
     top: 10%;
-    left: 20%;
+    left: 5%;
     animation: jump 6s infinite;
     z-index: 2; /* Ensure dolphins are above the overlay but below the form */
 }
 
 .login-container .dolphin-small {
-    content: url('/src/components/image\ \(6\)-fotor-bg-remover-2024081310580.jpg');
+    content: url('/src/components/imgbin-dolphin-cartoon-drawing-dolphin-blue-and-white-dolphin-illustration-Z1XmB7RytZ4YnWvv3Zs3kZY8N-fotor-bg-remover-20240813113931.png');
     position: absolute;
     width: 500px; /* Adjust width to make the dolphin smaller */
     height: auto;
     top: 20%;
-    left: 30%;
+    left: 10%;
     animation: jump 8s infinite;
     animation-delay: 2s;
     z-index: 2; /* Ensure dolphins are above the overlay but below the form */
