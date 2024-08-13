@@ -1,10 +1,11 @@
-// pages/Home.jsx
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Home.css'; // Importing the CSS file for bubble effects
 
-const Home = () => {
+const Home = ({ onLogout }) => {
   const [text, setText] = useState('');
   const [lastEntry, setLastEntry] = useState('');
+  const navigate = useNavigate();
 
   const handleEnterToDB = async () => {
     try {
@@ -44,6 +45,11 @@ const Home = () => {
     } catch (error) {
       console.error('Fetch error:', error);
     }
+  };
+
+  const handleLogout = () => {
+    onLogout(); // Notify App component of logout
+    navigate('/'); // Redirect to login page
   };
 
   const containerStyle = {
@@ -158,6 +164,22 @@ const Home = () => {
           onMouseUp={(e) => e.currentTarget.style.transform = 'scale(1)'}
         >
           Get Last Entry
+        </button>
+        <button 
+          onClick={handleLogout} 
+          style={buttonStyle}
+          onMouseOver={(e) => {
+            e.currentTarget.style.backgroundColor = buttonHoverStyle.backgroundColor;
+            e.currentTarget.style.boxShadow = buttonHoverStyle.boxShadow;
+          }}
+          onMouseOut={(e) => {
+            e.currentTarget.style.backgroundColor = buttonStyle.backgroundColor;
+            e.currentTarget.style.boxShadow = buttonStyle.boxShadow;
+          }}
+          onMouseDown={(e) => e.currentTarget.style.transform = buttonClickStyle.transform}
+          onMouseUp={(e) => e.currentTarget.style.transform = 'scale(1)'}
+        >
+          Logout
         </button>
       </div>
       <div style={boxStyle}>
