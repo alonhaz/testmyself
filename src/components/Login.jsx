@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './Login.css';
 
-
 const Login = ({ onLogin }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -33,6 +32,9 @@ const Login = ({ onLogin }) => {
 
   return (
     <div className="login-container">
+      {/* Dolphins added here */}
+      <div className="dolphin"></div>
+      <div className="dolphin-small"></div>
       <h2 className="login-heading">Login Page</h2>
       <form onSubmit={handleSubmit} className="login-form">
         <input

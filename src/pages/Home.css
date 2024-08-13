@@ -1,47 +1,46 @@
 /* Home.css */
-@keyframes bubble {
-    0% {
-      transform: scale(1);
+@keyframes jump {
+  0% {
+      transform: translateY(0) scale(0.5);
       opacity: 1;
-    }
-    100% {
-      transform: scale(1.5);
-      opacity: 0;
-    }
   }
-  
-  .bubbles {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    overflow: hidden;
+  50% {
+      transform: translateY(-50px) scale(0.6);
+      opacity: 0.8;
   }
-  
-  .bubbles::before {
-    content: '';
-    position: absolute;
-    border-radius: 50%;
-    background: rgba(255, 0, 129, 0.5);
-    width: 150px;
-    height: 150px;
-    top: 20%;
-    left: 20%;
-    animation: bubble 6s infinite;
+  100% {
+      transform: translateY(0) scale(0.5);
+      opacity: 1;
   }
-  
-  .bubbles::after {
-    content: '';
-    position: absolute;
-    border-radius: 50%;
-    background: rgba(0, 255, 255, 0.5);
-    width: 100px;
-    height: 100px;
-    top: 50%;
-    left: 60%;
-    animation: bubble 8s infinite;
-    animation-delay: 2s;
-  }
-  
+}
+
+.bubbles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.bubbles::before {
+  /*content: url('/src/components/image\ \(6\)-fotor-bg-remover-2024081310580.png');
+  position: absolute;
+  width: 75px; /* Adjust width to make the dolphin smaller */
+  height: auto;
+  top: 20%;
+  left: 20%;
+  animation: jump 6s infinite;
+}
+
+.bubbles::after {
+  content: url('/src/components/png-transparent-death-grim-cartoon-grim-s-cartoon-fictional-character-skull-art-fotor-bg-remover-20240813111850.png');
+  position: absolute;
+  width: 50px; /* Adjust width to make the dolphin smaller */
+  height: auto;
+  top: 10%;
+  left: 30%;
+  animation: jump 8s infinite;
+  animation-delay: 2s;
+}
