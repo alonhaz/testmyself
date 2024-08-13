@@ -12,7 +12,7 @@
     box-sizing: border-box;
     overflow: hidden;
     position: relative;
-    background-image: url('/assests/beach-backgroud.jpg'); /* Beachy image path */
+    background-image: url('/src/components/beach-backgroud.jpg'); /* Beachy image path */
     background-size: cover;
     background-position: center;
 }
@@ -31,7 +31,7 @@
 
 /* Adding animated dolphins */
 .login-container .dolphin {
-    content: url('/src/components/ima\ \(6\)-fotor-bg-remover-2024081310580.png');
+    content: url('/src/components/ima\ \(6\)-fotor-bg-remover-2024081310580.jpg');
     position: absolute;
     width: 75px; /* Adjust width to make the dolphin smaller */
     height: auto;
@@ -42,7 +42,7 @@
 }
 
 .login-container .dolphin-small {
-    content: url('/assests/image\ \(6\)-fotor-bg-remover-2024081310580.png');
+    content: url('/src/components/image\ \(6\)-fotor-bg-remover-2024081310580.jpg');
     position: absolute;
     width: 500px; /* Adjust width to make the dolphin smaller */
     height: auto;
