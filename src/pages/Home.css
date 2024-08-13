@@ -35,7 +35,7 @@
 }
 
 .bubbles::after {
-  content: url('/src/components/png-transparent-death-grim-cartoon-grim-s-cartoon-fictional-character-skull-art-fotor-bg-remover-20240813111850.png');
+  content: url('/assests/png-transparent-death-grim-cartoon-grim-s-cartoon-fictional-character-skull-art-fotor-bg-remover-20240813111850.png');
   position: absolute;
   width: 50px; /* Adjust width to make the dolphin smaller */
   height: auto;
