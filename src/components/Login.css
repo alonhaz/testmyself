@@ -7,13 +7,13 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background: linear-gradient(45deg, #1A1A1D, #333);
-    color: #EAEAEA;
+    background: linear-gradient(45deg, #87CEEB, #FFF5EE); /* Ocean to sandy color gradient */
+    color: #333;
     padding: 20px;
     box-sizing: border-box;
     overflow: hidden;
     position: relative;
-    background-image: url('/src/components/robotic-background.png.avif'); /* Add your robotic image path */
+    background-image: url('/src/components/beach-backgroud.jpg'); /* Beachy image path */
     background-size: cover;
     background-position: center;
   }
@@ -26,7 +26,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+    background: rgba(255, 255, 255, 0.6); /* Light overlay for better text visibility */
     z-index: 1;
   }
   
@@ -35,10 +35,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #222;
+    background: rgba(255, 255, 255, 0.8); /* Light, semi-transparent background */
     padding: 40px;
     border-radius: 8px;
-    box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     width: 100%;
     max-width: 400px;
     position: relative;
@@ -51,18 +51,17 @@
     padding: 12px;
     margin: 10px 0;
     border-radius: 8px;
-    border: 2px solid #6A097D;
-    background: #444;
-    color: #EAEAEA;
+    border: 2px solid #1E90FF; /* Ocean blue */
+    background: #FFF;
+    color: #333;
     font-size: 16px;
     outline: none;
-    animation: input-focus 0.3s ease-in-out;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
   }
   
   .login-input:focus {
-    border-color: #C060A1;
-    box-shadow: 0 0 10px rgba(255, 0, 129, 0.7);
+    border-color: #00BFFF; /* Lighter ocean blue */
+    box-shadow: 0 0 8px rgba(0, 191, 255, 0.5);
   }
   
   /* Button Styles */
@@ -71,8 +70,8 @@
     font-size: 16px;
     border-radius: 8px;
     border: none;
-    background: #6A097D;
-    color: #fff;
+    background: #FFD700; /* Sandy yellow */
+    color: #333;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
     outline: none;
@@ -100,34 +99,41 @@
   }
   
   .login-button:hover {
-    background: #C060A1;
-    box-shadow: 0 0 25px rgba(255, 0, 129, 0.8);
+    background: #F0E68C; /* Light sandy color */
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
   }
   
   .login-button:active {
     transform: scale(0.95);
-    box-shadow: 0 0 15px rgba(255, 0, 129, 0.6);
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
   }
   
   /* Animations */
   @keyframes pulse {
     0% {
-      color: #C060A1;
+      color: #FFD700;
     }
     50% {
-      color: #FF6F91;
+      color: #FF6347; /* Coral */
     }
     100% {
-      color: #C060A1;
+      color: #FFD700;
     }
   }
   
   @keyframes input-focus {
     0% {
-      border-color: #6A097D;
+      border-color: #1E90FF;
     }
     100% {
-      border-color: #C060A1;
+      border-color: #00BFFF;
     }
+  }
+  
+  /* Additional styles for beach theme */
+  h2.login-heading {
+    font-family: 'Pacifico', cursive; /* Fun, beachy font */
+    font-size: 2rem;
+    margin-bottom: 20px;
   }
   
