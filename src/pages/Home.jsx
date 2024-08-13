@@ -57,7 +57,8 @@ const Home = ({ onLogout }) => {
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    height: '100vh',
+    width: '100vw', // Full viewport width
+    height: '100vh', // Full viewport height
     textAlign: 'center',
     padding: '20px',
     boxSizing: 'border-box',
