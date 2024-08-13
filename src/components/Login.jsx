@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import './Login.css'; // Importing the CSS file for animations
 
-const Login = () => {
+const Login = ({ onLogin }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -22,9 +19,7 @@ const Login = () => {
       const data = await response.json();
 
       if (data.authenticated) {
-        localStorage.setItem('authenticated', 'true');
-        console.log('Login successful');
-        navigate('/home');
+        onLogin(); // Notify App component of successful login
       } else {
         alert('Invalid credentials');
       }
