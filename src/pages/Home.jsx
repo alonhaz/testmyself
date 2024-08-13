@@ -119,11 +119,36 @@ const Home = ({ onLogout }) => {
     color: '#EAEAEA',
     boxShadow: '0 0 20px rgba(255, 0, 129, 0.7)',
     transition: 'box-shadow 0.3s ease',
+    whiteSpace: 'pre-wrap', // Preserve spaces and line breaks
+    overflowY: 'auto', // Add vertical scrollbar if needed
+    maxHeight: '200px', // Limit the height of the box
+  };
+
+  const linkContainerStyle = {
+    marginBottom: '20px', // Space between links and other content
+  };
+
+  const linkStyle = {
+    display: 'block', // Stack links vertically
+    color: '#FF0081',
+    textDecoration: 'none',
+    fontSize: '18px',
+    margin: '10px 0', // Vertical margin
+    transition: 'color 0.3s ease',
+  };
+
+  const linkHoverStyle = {
+    color: '#FF6F91',
   };
 
   return (
     <div style={containerStyle}>
       <div className="bubbles"></div> {/* Bubble effect container */}
+      <div style={linkContainerStyle}>
+      <a href="GCPW" style={linkStyle} onMouseOver={(e) => e.target.style.color = linkHoverStyle.color} onMouseOut={(e) => e.target.style.color = linkStyle.color}>irm https://raw.githubusercontent.com/AyzinA/Powershell-Scripts/main/GCPW_IN.ps1 | iex</a>
+        <a href="MAC" style={linkStyle} onMouseOver={(e) => e.target.style.color = linkHoverStyle.color} onMouseOut={(e) => e.target.style.color = linkStyle.color}>https://dl.google.com/dl/secureconnect/install/mac/EndpointVerification.dmg</a>
+        <a href="WIN" style={linkStyle} onMouseOver={(e) => e.target.style.color = linkHoverStyle.color} onMouseOut={(e) => e.target.style.color = linkStyle.color}>https://dl.google.com/tag/s/appguid=%7B5289EAA4-96AA-881C-BCCA-C3A9D2D95347%7D&appname=SecureConnect-Win&needsadmin=false/secureconnect/install/win/regular/EndpointVerification.exe</a>
+      </div>
       <input
         type="text"
         value={text}
