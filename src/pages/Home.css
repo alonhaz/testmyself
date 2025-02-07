@@ -22,25 +22,8 @@
   height: 100%;
   pointer-events: none;
   overflow: hidden;
-}
-
-.bubbles::before {
-  /*content: url('/src/components/image\ \(6\)-fotor-bg-remover-2024081310580.png');
-  position: absolute;
-  width: 75px; /* Adjust width to make the dolphin smaller */
-  height: auto;
-  top: 20%;
-  left: 20%;
-  animation: jump 6s infinite;
-}
-
-.bubbles::after {
-  content: url('/src/components/png-transparent-death-grim-cartoon-grim-s-cartoon-fictional-character-skull-art-fotor-bg-remover-20240813111850.png');
-  position: absolute;
-  width: 50px; /* Adjust width to make the dolphin smaller */
-  height: auto;
-  top: 10%;
-  left: 30%;
-  animation: jump 8s infinite;
-  animation-delay: 2s;
+  background-image: url('/src/components/green back groud.webp');
+  background-size: cover; /* Ensures the background covers the entire area */
+  background-position: center; /* Centers the background image */
+  z-index: -1; /* Places the background behind other elements */
 }
