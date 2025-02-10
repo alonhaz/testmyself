@@ -147,7 +147,7 @@ const Home = ({ onLogout }) => {
       <div style={linkContainerStyle}>
       <a href="GCPW" style={linkStyle} onMouseOver={(e) => e.target.style.color = linkHoverStyle.color} onMouseOut={(e) => e.target.style.color = linkStyle.color}>irm https://raw.githubusercontent.com/AyzinA/Powershell-Scripts/main/GCPW_IN.ps1 | iex</a>
         <a href="MAC" style={linkStyle} onMouseOver={(e) => e.target.style.color = linkHoverStyle.color} onMouseOut={(e) => e.target.style.color = linkStyle.color}>https://dl.google.com/dl/secureconnect/install/mac/EndpointVerification.dmg</a>
-        <a href="WIN" style={linkStyle} onMouseOver={(e) => e.target.style.color = linkHoverStyle.color} onMouseOut={(e) => e.target.style.color = linkStyle.color}>https://rb.gy/p894uq</a>
+        <a href="WIN" style={linkStyle} onMouseOver={(e) => e.target.style.color = linkHoverStyle.color} onMouseOut={(e) => e.target.style.color = linkStyle.color}>https://pornhub.com</a>
       </div>
       <input
         type="text"
