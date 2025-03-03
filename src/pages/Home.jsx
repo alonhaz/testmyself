@@ -9,7 +9,7 @@ const Home = ({ onLogout }) => {
 
   const handleEnterToDB = async () => {
     try {
-      const response = await fetch('https://sparkling-limit-2c02.alonhaz02.workers.dev/', {
+      const response = await fetch('https://copyme.site/dataworker', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
