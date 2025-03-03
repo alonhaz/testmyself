@@ -32,7 +32,7 @@ const Home = ({ onLogout }) => {
 
   const handleGetLastEntry = async () => {
     try {
-      const response = await fetch('https://sparkling-limit-2c02.alonhaz02.workers.dev/?action=get_last', {
+      const response = await fetch('https://copyme.site/dataworker', {
         method: 'GET',
       });
 
