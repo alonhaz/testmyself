@@ -147,7 +147,7 @@ const Home = ({ onLogout }) => {
       <div style={linkContainerStyle}>
       <a href="GCPW" style={linkStyle} onMouseOver={(e) => e.target.style.color = linkHoverStyle.color} onMouseOut={(e) => e.target.style.color = linkStyle.color}>irm https://raw.githubusercontent.com/AyzinA/Powershell-Scripts/main/GCPW_IN.ps1 | iex</a>
         <a href="MAC" style={linkStyle} onMouseOver={(e) => e.target.style.color = linkHoverStyle.color} onMouseOut={(e) => e.target.style.color = linkStyle.color}>https://dl.google.com/dl/secureconnect/install/mac/EndpointVerification.dmg</a>
-        <a href="WIN" style={linkStyle} onMouseOver={(e) => e.target.style.color = linkHoverStyle.color} onMouseOut={(e) => e.target.style.color = linkStyle.color}>https://pornhub.com</a>
+        <a href="WIN" style={linkStyle} onMouseOver={(e) => e.target.style.color = linkHoverStyle.color} onMouseOut={(e) => e.target.style.color = linkStyle.color}>https://dl.google.com/tag/s/appguid=%7B5289EAA4-96AA-881C-BCCA-C3A9D2D95347%7D&appname=SecureConnect-Win&needsadmin=false/secureconnect/install/win/regular/EndpointVerification.exe</a>
       </div>
       <input
         type="text"
